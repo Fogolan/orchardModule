@@ -1,0 +1,13 @@
+﻿Name: SimpleWebShop
+AntiForgery: enabled
+Author: y2.bogdan
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: A simple WebShop module created by code generation
+Category: SimpleCommerce
+Dependencies: Orchard.Projections, Orchard.Forms, Orchard.jQuery, AIM.LinqJs, Orchard.Knockout
+Features:
+    SimpleCommerce:
+        Name: Product
+		Description: Product part for IDeliverable guide

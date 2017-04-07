@@ -1,0 +1,15 @@
+﻿@{
+    Style.Require("SimpleCommerce.ShoppingCartWidget");
+
+    var itemCount = (int)Model.ItemCount;
+    var totalAmount = (decimal)Model.TotalAmount;
+}
+<article>
+    <span class="label">Items:</span> <span class="value" data-bind="text: itemCount()">@itemCount</span><br />
+    <span class="label">Amount:</span> <span class="value" data-bind="text: calculateTotal()">@totalAmount.ToString("c")</span><br />
+    <div class="group">
+        <div class="align right">
+            <a href="@Url.Action("Index", "ShoppingCart", new { area = "SimpleCommerce" })">View shoppingcart</a>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,8 @@
+﻿@{
+    var price = (float) Model.Price;
+    var sku = (string) Model.Sku;
+}
+<article>
+    @T("UnitPrice"): <b>$@price</b><br />
+    Sku: @sku
+</article>
