@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Web.Mvc;
 using Orchard;
-using Orchard.ContentManagement;
 using Orchard.Mvc;
 using Orchard.Themes;
 using SimpleCommerce.Models;
 using SimpleCommerce.Services;
-using SimpleCommerce.ViewModel;
+using SimpleCommerce.ViewModels;
 
 namespace SimpleCommerce.Controllers
 {
@@ -22,7 +21,7 @@ namespace SimpleCommerce.Controllers
         [HttpPost]
         public ActionResult Add(int id) {
             _shoppingCart.Add(id, 1);
-            return RedirectToAction("Index");
+            return RedirectToAction($"Index");
         }
 
         [Themed]
@@ -39,14 +38,18 @@ namespace SimpleCommerce.Controllers
             return new ShapeResult(this, shape);
         }
 
-        public ActionResult Update(string command, UpdateShoppingCartItemViewModel[] items) {
+        [HttpPost]
+        public ActionResult Update(string command, UpdateShoppingCartItemViewModel[] items)
+        {
             UpdateShoppingCart(items);
+
             if (Request.IsAjaxRequest())
                 return Json(true);
 
-            switch (command) {
+            switch (command)
+            {
                 case "Checkout":
-                    break;
+                    return RedirectToAction("SignupOrLogin", "Checkout");
                 case "ContinueShopping":
                     break;
                 case "Update":

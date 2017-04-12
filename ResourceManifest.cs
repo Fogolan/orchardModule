@@ -12,6 +12,8 @@ namespace SimpleCommerce
 
             manifest.DefineStyle("SimpleCommerce.ShoppingCartWidget").SetUrl("shoppingcartwidget.css").SetDependencies("Webshop.Common");
 
+            manifest.DefineStyle("SimpleCommerce.Summary").SetUrl("checkout-summary.css").SetDependencies("SimpleCommerce.Common");
+
             manifest.DefineScript("SimpleCommerce.ShoppingCart").SetUrl("shoppingcart.js").SetDependencies("jQuery", "jQuery_LinqJs", "ko");
         }
     }

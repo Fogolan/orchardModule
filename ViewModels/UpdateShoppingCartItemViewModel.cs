@@ -1,4 +1,4 @@
-﻿namespace SimpleCommerce.ViewModel
+﻿namespace SimpleCommerce.ViewModels
 {
     public class UpdateShoppingCartItemViewModel
     {

@@ -10,8 +10,8 @@
     <p>You don't have any items in your shopping cart.</p>
     <a class="button" href="#">Continue shopping</a>
 }
-else { 
-    
+else
+{
     <div data-bind="visible: hasItems()">
         <article class="shoppingcart" data-load-shoppingcart-url="@Url.Action("GetItems", "ShoppingCart", new { area = "SimpleCommerce" })" data-update-shoppingcart-url="@Url.Action("Update", "ShoppingCart", new { area = "SimpleCommerce" })">
             @using(Html.BeginFormAntiForgeryPost(Url.Action("Update", "ShoppingCart", new { area = "SimpleCommerce" })))

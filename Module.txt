@@ -6,7 +6,7 @@ Version: 1.0
 OrchardVersion: 1.0
 Description: A simple WebShop module created by code generation
 Category: SimpleCommerce
-Dependencies: Orchard.Projections, Orchard.Forms, Orchard.jQuery, AIM.LinqJs, Orchard.Knockout
+Dependencies: Orchard.Projections, Orchard.Forms, Orchard.jQuery, AIM.LinqJs, Orchard.Knockout, Orchard.Widgets, Orchard.Users
 Features:
     SimpleCommerce:
         Name: Product

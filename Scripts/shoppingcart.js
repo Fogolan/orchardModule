@@ -1,6 +1,6 @@
 ﻿(function ($) {
 
-    $(".shoppingcart a.icon.delete").click(function (e) {
+    $(".shoppingcart a.icon.delete").live("click", function (e) {
         e.preventDefault();
 
         var shoppingCartItem = ko.dataFor(this);
@@ -16,9 +16,8 @@
         var $form = $button.parents("form");
 
         $form.submit();
+
     });
-
-
 
     var ShoppingCartItem = function (data) {
 
@@ -44,8 +43,6 @@
             return shoppingCart.items.indexOf(this);
         }, this);
     };
-
-
 
     var shoppingCart = {
         items: ko.observableArray()
@@ -76,7 +73,6 @@
         $.ajax(config);
     };
 
-
     if ($("article.shoppingcart").length > 0) {
         $.ajaxSetup({ cache: false });
         ko.applyBindings(shoppingCart);
@@ -93,4 +89,5 @@
             }
         });
     }
+
 })(jQuery);
